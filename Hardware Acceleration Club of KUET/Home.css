@@ -6,7 +6,8 @@
 }
 
 body {
-    background: #0b0f1a;
+    background: #0b0f1a; 
+
     color: white;
 }
 
@@ -14,14 +15,15 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 10px 30px;
     align-items: center;
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #00c6ff;
+.logo{
+    width: 5vw;       
+    min-width: 60px;  
+    max-width: 80px;  
+    height: auto;
 }
 
 .nav-links {
@@ -40,25 +42,52 @@ body {
 }
 
 .btn {
-    background: #00c6ff;
-    border: none;
+    background: transparent;
+    border:1px solid #00c6ff;
+     color: #00c6ff;
     padding: 10px 18px;
     border-radius: 8px;
     cursor: pointer;
 }
+/* .bg{
+     background: rgb(0, 1, 1);
+} */
 
-/* Hero Section */
+/* front Image */
+.image_container {
+    background:
+        linear-gradient(to right, #0b0f1a,  transparent 50%),
+        linear-gradient(to bottom,  #0b0f1a,transparent 40%),
+        linear-gradient(to top, #0b0f1a,  transparent 10%),
+        url('Images/HACK lab under the night sky.png');
+
+    background-size: 65%;          
+    background-position: 100% 10%;   
+    background-repeat: no-repeat;
+}
+
+
+
+
 .hero {
-    height: 90vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     padding: 0 60px;
-    background: url('your-background.png') no-repeat center/cover;
 }
 
 .hero-text h1 {
     font-size: 60px;
     line-height: 1.2;
+}
+
+.hero-text h3{
+    margin-top: 10px;
+    color: #dfd8d8;
+}
+
+.hero-text b{
+    color: #ff7c15;
 }
 
 .hero-text span {
@@ -93,7 +122,6 @@ body {
     cursor: pointer;
 }
 
-/* Features */
 .features {
     display: flex;
     justify-content: space-around;
@@ -115,7 +143,7 @@ body {
     transform: translateY(-8px);
 }
 
-/* Projects */
+
 .projects {
     padding: 50px;
     text-align: center;
@@ -135,7 +163,7 @@ body {
     width: 200px;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 20px;
