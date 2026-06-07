@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
+    /* width: 100%; */
     background: #0b0f1a; 
-
     color: white;
 }
 
@@ -65,12 +65,12 @@ body {
     height: 40vh;
     display: flex;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 80px;
 }
 
 .hero-text h2 {
     font-size: 40px;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 .hero-text span {
@@ -81,44 +81,33 @@ body {
     margin: 20px 0;
     max-width: 500px;
     color: #aaa;
-}
-
-.buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.primary {
-    background: #00c6ff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.secondary {
-    background: transparent;
-    border: 1px solid #00c6ff;
-    color: #00c6ff;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
+    line-height: 1.5;
 }
 
 
+/* Stats for memebers , prjects, workshops, achivements  */
 .stats{
     background: #020817;
-    font-family: Arial, Helvetica, sans-serif;
     width: 90%;
     margin: 50px auto;
     background: rgba(20,30,55,0.9);
     border-radius: 20px;
-    padding: 35px;
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     backdrop-filter: blur(10px);
+     border:1px solid rgba(0,207,255,0.25);
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.stats:hover{
+    transform:translateY(-6px);
+
+    border-color:#00d0ff;
+
+    box-shadow:
+        0 0 20px rgba(0,207,255,0.35),
+        0 0 40px rgba(0,207,255,0.15);
 }
 
 .stat-box{
@@ -129,25 +118,25 @@ body {
 }
 
 .stat-box i{
-    font-size: 45px;
+    font-size: 22px;
     color: #00cfff;
 }
 
 .stat-box h2{
     color: #00cfff;
-    font-size: 45px;
+    font-size: 28px;
     margin-bottom: 5px;
 }
 
 .stat-box h3{
     color: white;
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 5px;
 }
 
 .stat-box p{
     color: #a7a7a7;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .divider{
@@ -157,9 +146,12 @@ body {
     margin: 0 25px;
 }
 
+/* About info , Mission and Vission */
+
 .about-info{
-    width:80%;
-    margin:80px auto;
+    display: flex;
+    width:50%;
+    margin:10px auto;
 }
 
 .info-box{
@@ -167,11 +159,12 @@ body {
     align-items:flex-start;
     gap:20px;
     margin-bottom:40px;
+    
 }
 
 .icon{
-    width:70px;
-    height:70px;
+    width:5vh;
+    height:5vh;
     border:2px solid #00cfff;
     border-radius:50%;
     display:flex;
@@ -182,18 +175,219 @@ body {
 
 .icon i{
     color:#00cfff;
-    font-size:28px;
+    font-size:15px;
 }
 
-.content h2{
+.content h4{
     color:#ffffff;
-    font-size:32px;
+    font-size:22px;
     margin-bottom:10px;
 }
 
 .content p{
     color:#b5b5b5;
-    font-size:24px;
-    line-height:1.6;
-    max-width:700px;
+    font-size:16px;
+    line-height:1.5;
+    max-width:300px;
 }
+
+
+/* what we do */
+.what-we-do{
+    width:90%;
+    margin:80px auto;
+    display:flex;
+    justify-content:space-evenly;
+    gap:50px;
+}
+
+/* Left Side */
+
+.left-content{
+    width:35%;
+}
+
+.left-content h4{
+    color:#00cfff;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.left-content h1{
+    color:white;
+    font-size:35px;
+    margin-bottom:30px;
+}
+
+.left-content p{
+    color:#a8a8a8;
+    font-size:18px;
+    line-height:1.5;
+}
+
+/* Right Side */
+
+.cards{
+    width:65%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:rgba(20,30,55,0.8);
+    padding:20px;
+    border-radius:18px;
+        border:1px solid rgba(0,207,255,0.25);
+
+    box-shadow:
+        0 0 15px rgba(0,207,255,0.08),
+        inset 0 0 20px rgba(0,207,255,0.03);
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+
+    border-color:#00cfff;
+
+    box-shadow:
+        0 0 20px rgba(0,207,255,0.35),
+        0 0 40px rgba(0,207,255,0.15);
+}
+
+.icon-box{
+    width:5vh;
+    height:5vh;
+    background:rgba(0,200,255,0.1);
+    border-radius:8px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.icon-box i{
+    color:#00cfff;
+    font-size:15px;
+}
+
+.card h2{
+    color:white;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#a8a8a8;
+    font-size:14px;
+    line-height:1.2;
+}
+
+/* Our focus area */
+.focus-section{
+    padding:80px 5%;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+.focus-section h2{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:15px;
+    color:#fff;
+}
+.container span{
+    color: #00c6ff;
+}
+
+.focus-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    /* display: flex;*/
+    justify-content: space-evenly;
+    gap:20px;
+    margin-top:50px;
+}
+
+.focus-card{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    padding:28px 25px;
+    border-radius:14px;
+
+    background:rgba(10,18,35,0.95);
+
+    border:1px solid rgba(0,207,255,0.25);
+
+    box-shadow:
+        0 0 15px rgba(0,207,255,0.08),
+        inset 0 0 20px rgba(0,207,255,0.03);
+
+    transition:0.35s ease;
+}
+
+.focus-card:hover{
+    transform:translateY(-6px);
+
+    border-color:#00cfff;
+
+    box-shadow:
+        0 0 20px rgba(0,207,255,0.35),
+        0 0 40px rgba(0,207,255,0.15);
+}
+
+.focus-card i{
+    font-size:32px;
+    color:#00cfff;
+
+}
+
+.focus-card span{
+    font-size:20px;
+    font-weight:500;
+    color:#fff;
+}
+
+ .rocket{
+    width: 75%;
+    background: rgba(20,30,55,0.9);
+    margin: 50px auto;
+    border-radius: 12px;
+    border:1px solid rgba(0,207,255,0.25);
+}
+.footer{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 20px;
+} 
+
+.rocket-icon i{
+    color:#00cfff;
+    font-size:25px;
+}
+
+ .footer-icon{
+    display: flex;
+    gap: 15px;
+}
+
+.rocket:hover{
+    transform:translateY(-3px);
+
+    border-color:#0684a1;
+
+    box-shadow:
+        0 0 20px rgba(0,207,255,0.35),
+        0 0 40px rgba(0,207,255,0.15);
+}
+
