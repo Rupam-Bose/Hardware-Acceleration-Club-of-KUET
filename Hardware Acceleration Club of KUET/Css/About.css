@@ -44,7 +44,15 @@ body {
     background: transparent;
     border:1px solid #00c6ff;
     color: #00c6ff;
-    padding: 10px 18px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn1 {
+    background: transparent;
+    border:1px solid #00c6ff;
+    color: #00c6ff;
+    padding: 10px 15px 10px 15px;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -390,4 +398,6 @@ body {
         0 0 20px rgba(0,207,255,0.35),
         0 0 40px rgba(0,207,255,0.15);
 }
+
+
 

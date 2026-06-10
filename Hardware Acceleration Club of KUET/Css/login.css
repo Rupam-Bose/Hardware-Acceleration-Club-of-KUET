@@ -50,19 +50,6 @@ body {
     cursor: pointer;
 }
 
-.btn1 {
-    background: transparent;
-    border:1px solid #00c6ff;
-    color: #00c6ff;
-    padding: 10px 15px 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-
-
-
-
 /* Background */
 
 .bg-overlay{

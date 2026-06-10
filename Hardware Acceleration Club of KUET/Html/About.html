@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/Css/About.css">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="/JavaScript/hack.js"></script>
 </head>
 <body>
 
@@ -14,16 +15,18 @@
 <div class="image_container">
 <header>
     <nav class="navbar">
-         <img src="/Images/Hack_logo.png" alt="" class="logo">
+         <img onclick="openHome()" src="/Images/Hack_logo.png" alt="" class="logo">
         <ul class="nav-links">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Events</li>
-            <li>Team</li>
-            <li>Contact</li>
+            <li onclick="openHome()">Home</li>
+            <li onclick="openAbout()">About</li>
+            <li onclick="openProjects()">Projects</li>
+            <li onclick="openEvents()">Events</li>
+            <li onclick="openContact()">Contact</li>
         </ul>
-        <button class="btn">Join Us 👤</button>
+        <div>
+        <button onclick="openJoin_Us()" class="btn">Join Us</button>
+        <button onclick="openlogin()" class="btn1">Log in</button>
+        </div>
     </nav>
 </header>
 
@@ -251,7 +254,9 @@
 
     </div>
 </section>
-    
+  
+
+
 
 
 

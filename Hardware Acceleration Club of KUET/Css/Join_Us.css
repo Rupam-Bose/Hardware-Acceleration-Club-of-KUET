@@ -41,14 +41,6 @@ body {
     color: #00c6ff;
 }
 
-.btn {
-    background: transparent;
-    border:1px solid #00c6ff;
-    color: #00c6ff;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-}
 
 .btn1 {
     background: transparent;

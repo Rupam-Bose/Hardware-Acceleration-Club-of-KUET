@@ -7,22 +7,21 @@
     <link rel="stylesheet" href="/Css/login.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="/JavaScript/hack.js"></script>
 </head>
 <body>
-    <header>
+<header>
     <nav class="navbar">
-         <img src="/Images/Hack_logo.png" alt="" class="logo">
+         <img onclick="openHome()" src="/Images/Hack_logo.png" alt="" class="logo">
         <ul class="nav-links">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Events</li>
-            <li>Team</li>
-            <li>Contact</li>
+            <li onclick="openHome()">Home</li>
+            <li onclick="openAbout()">About</li>
+            <li onclick="openProjects()">Projects</li>
+            <li onclick="openEvents()">Events</li>
+            <li onclick="openContact()">Contact</li>
         </ul>
         <div>
-        <button class="btn">Join Us</button>
-        <button class="btn1">Log in</button>
+        <button onclick="openJoin_Us()" class="btn">Join Us</button>
         </div>
     </nav>
 </header>
