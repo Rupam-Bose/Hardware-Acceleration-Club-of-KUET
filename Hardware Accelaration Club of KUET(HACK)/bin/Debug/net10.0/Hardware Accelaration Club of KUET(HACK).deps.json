@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Hardware Accelaration Club of KUET(HACK)/1.0.0": {
+        "runtime": {
+          "Hardware Accelaration Club of KUET(HACK).dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Hardware Accelaration Club of KUET(HACK)/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
