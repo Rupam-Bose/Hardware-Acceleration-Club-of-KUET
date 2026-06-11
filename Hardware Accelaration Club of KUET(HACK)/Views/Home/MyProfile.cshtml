@@ -1,0 +1,373 @@
+@{
+    Layout = null;
+}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Dashboard</title>
+
+<link rel="stylesheet" href="/css/MyProfile.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet">
+<script src="/js/hack.js"></script>
+<script src="/js/MyProfile.js"></script>
+
+
+<header>
+    <nav class="navbar">
+        <img onclick="openHome()" src="/Images/Hack_logo.png" alt="" class="logo">
+        <ul class="nav-links">
+            <li onclick="openHome()">Home</li>
+            <li onclick="openAbout()">About</li>
+            <li onclick="openProjects()">Projects</li>
+            <li onclick="openEvents()">Events</li>
+            <li onclick="openContact()">Contact</li>
+        </ul>
+        <div>
+            <button onclick="openlogin()" class="btn1">Log Out</button>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- PROFILE HEADER -->
+
+    <section class="profile-card">
+
+        <div class="profile-image">
+
+            <img src="profile.jpg">
+
+            <div class="camera">
+                <i class="fa-solid fa-camera"></i>
+            </div>
+
+            <div class="status"></div>
+
+        </div>
+
+        <div class="profile-info">
+
+            <h1 id="fullName">Loading...</h1>
+
+            <div class="details">
+
+                <p><i class="fa-solid fa-graduation-cap"></i> KUET</p>
+
+                <p>
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span id="department">Loading...</span>
+                </p>
+
+                <p>
+                    <i class="fa-regular fa-calendar"></i>
+                    <span id="batchSession">Loading...</span>
+                </p>
+
+                <p><i class="fa-solid fa-location-dot"></i> Khulna, Bangladesh</p>
+
+                <p>
+                    <i class="fa-regular fa-envelope"></i>
+                    <span id="email">Loading...</span>
+                </p>
+
+                <p><i class="fa-solid fa-link"></i> rifat.dev</p>
+
+            </div>
+
+            <p class="bio">
+                Passionate about embedded systems, IoT and robotics.
+                Always exploring new technologies and building
+                solutions for real world problems.
+            </p>
+
+        </div>
+
+        <div class="edit-area">
+
+            <button>
+                <i class="fa-regular fa-pen-to-square"></i>
+                Edit Profile
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stat-box">
+            <i class="fa-solid fa-rocket"></i>
+            <div class="cont">
+                <h2>12</h2>
+                <p>Projects Completed</p>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-solid fa-users"></i>
+            <div class="cont">
+                <h2>8</h2>
+                <p>Collaborations Joined</p>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-regular fa-calendar"></i>
+            <div class="cont">
+                <h2>15</h2>
+                <p>Events Attended</p>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-solid fa-trophy"></i>
+            <div class="cont">
+                <h2>5</h2>
+                <p>Achievements</p>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-regular fa-star"></i>
+            <div class="cont">
+                <h2>320</h2>
+                <p>Community Points</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- CONTENT -->
+
+    <section class="content-grid">
+
+        <!-- ABOUT -->
+
+        <div class="card">
+
+            <h3>
+                <i class="fa-regular fa-user"></i>
+                About Me
+            </h3>
+
+            <p>
+                I am an undergraduate student at KUET pursuing BSc in ECE.
+                I love to build innovative projects and participate in
+                hackathons.
+            </p>
+
+            <hr>
+
+            <div class="info">
+
+                <div>
+                    <span>Date of Birth</span>
+                    <strong>20 March 2003</strong>
+                </div>
+
+                <div>
+                    <span>Joined On</span>
+                    <strong>15 Jan 2023</strong>
+                </div>
+
+                <div>
+                    <span>Phone</span>
+                    <strong>+880 17XX-XXXXXX</strong>
+                </div>
+
+                <div>
+                    <span>Website</span>
+                    <strong>rifat.dev</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RECENT ACTIVITY -->
+
+        <div class="card">
+
+            <div class="title-row">
+
+                <h2>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Recent Activity
+                </h2>
+
+                <button>View All</button>
+
+            </div>
+
+            <div class="activity">
+
+                <div>
+                    <h4>Submitted project "Smart Irrigation System"</h4>
+                    <p>2 days ago</p>
+                </div>
+
+                <div>
+                    <h4>Attended workshop on PCB Design</h4>
+                    <p>1 week ago</p>
+                </div>
+
+                <div>
+                    <h4>Joined IoT Hackathon 2025</h4>
+                    <p>2 weeks ago</p>
+                </div>
+
+                <div>
+                    <h4>Earned "Problem Solver" Badge</h4>
+                    <p>1 month ago</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACHIEVEMENTS -->
+
+    <section class="card achievement">
+
+        <div class="title-row">
+
+            <h2>
+                <i class="fa-solid fa-award"></i>
+                Achievements
+            </h2>
+
+            <button>View All</button>
+
+        </div>
+
+        <div class="badge-grid">
+
+            <div class="badge">
+                <h3>Problem Solver</h3>
+                <p>Solve 50 problems</p>
+            </div>
+
+            <div class="badge">
+                <h3>Project Hero</h3>
+                <p>Completed 10 projects</p>
+            </div>
+
+            <div class="badge">
+                <h3>Event Explorer</h3>
+                <p>Attend 10 events</p>
+            </div>
+
+            <div class="badge">
+                <h3>Team Player</h3>
+                <p>Collaborate in 5 projects</p>
+            </div>
+
+            <div class="badge">
+                <h3>Code Contributor</h3>
+                <p>Open source contribution</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo Section -->
+        <div class="footer-col">
+            <div class="logo">
+                <img src="/Images/Hack_logo.png" alt="" class="logo">
+                <div>
+                    <h2>HACK</h2>
+                </div>
+            </div>
+
+            <p>
+                Hardware Acceleration Club of KUET (HACK)
+            </p>
+
+            <p>
+                A community of innovators building the
+                future through hardware.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Team</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+            <h3>Connect</h3>
+
+            <div class="contact-item">
+                <i class="fa-regular fa-envelope"></i>
+                <span>hack@kuet.ac.bd</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+880 1712 345 678</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>KUET Campus, Khulna-9203, Bangladesh</span>
+            </div>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-col">
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        ©️ 2026 HACK KUET. All rights reserved.
+    </div>
+
+</footer>

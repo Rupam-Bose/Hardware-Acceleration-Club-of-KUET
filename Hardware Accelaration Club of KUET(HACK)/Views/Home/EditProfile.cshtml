@@ -1,0 +1,225 @@
+@{
+    Layout=null;
+}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/EditProfile.css">
+
+<header>
+    <nav class="navbar">
+         <img onclick="openHome()" src="/Images/Hack_logo.png" alt="" class="logo">
+        <ul class="nav-links">
+            <li onclick="openHome()">Home</li>
+            <li onclick="openAbout()">About</li>
+            <li onclick="openProjects()">Projects</li>
+            <li onclick="openEvents()">Events</li>
+            <li onclick="openContact()">Contact</li>
+        </ul>
+        <div>
+        <button onclick="openlogin()" class="btn1">Log Out</button>
+        </div>
+    </nav>
+</header>
+
+<form class="profile-form">
+
+    <div class="top-bar">
+        <div>
+            <h1>Edit Your Profile</h1>
+            <p>Update your information and preferences</p>
+        </div>
+
+        <div class="top-buttons">
+            <button type="button" class="cancel-btn">Cancel</button>
+            <button type="submit" class="save-btn">
+                <i class="fa-regular fa-floppy-disk"></i>
+                Save Changes
+            </button>
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <!-- Left Side -->
+        <div class="left-column">
+
+            <!-- Profile Picture -->
+            <div class="card">
+                <h2>Profile Picture</h2>
+
+                <div class="profile-upload">
+
+                    <div class="image-box">
+                        <img src="profile.jpg" alt="">
+                        <div class="camera">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                    </div>
+
+                    <div class="upload-area">
+                      
+
+                        <label class="upload-btn">
+                            <i class="fa-solid fa-upload"></i>
+                            Upload Photo
+                            <input type="file" hidden>
+                        </label>
+
+                        <button type="button" class="remove-btn">
+                            Remove Photo
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Academic Information -->
+            <div class="card">
+
+                <h2>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Academic Information
+                </h2>
+
+                <div class="input-group">
+                    <label>Department</label>
+                    <select id = "Department">
+                        <option value="">Select Your Department</option>
+                        <option value="CSE">CSE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="ME">ME</option>
+                        <option value="CE">CE</option>
+                    </select>
+                </div>
+
+                <div class="two-column">
+
+                    <div class="input-group">
+                        <label>Batch</label>
+                    <select id = "Batch">
+                        <option value="">Select Your Batch</option>
+                        <option value="2K20">2K20</option>
+                        <option value="2K21">2K21</option>
+                        <option value="2K22">2K22</option>
+                        <option value="2K23">2K23</option>
+                        <option value="2K24">2K24</option>
+                    </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" name="Email" id="mail">
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>University / Institute</label>
+                    <input type="text" name="University" id="university">
+                </div>
+
+                <div class="input-group">
+                    <label>Current Year / Semester</label>
+                    <input type="text" name="Semester" id="semester">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-column">
+
+            <!-- Personal Information -->
+            <div class="card">
+
+                <h2>
+                    <i class="fa-regular fa-user"></i>
+                    Personal Information
+                </h2>
+
+                <div class="two-column">
+
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" value="Ahmed Rifat">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Username</label>
+                        <input type="text" value="ahmedrifat21">
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" value="ahmedrifat@kuet.ac.bd">
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text" value="+880 17XX-XXXXXX">
+                </div>
+
+            </div>
+
+            <!-- About -->
+            <div class="card">
+
+                <h2>
+                    <i class="fa-regular fa-user"></i>
+                    About You
+                </h2>
+
+                <div class="input-group">
+                    <label>Bio</label>
+                    <textarea rows="3">Write Something...</textarea>
+                    <label>About Yourslef</label>
+                    <textarea rows="5">Write Something...</textarea>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Social Links -->
+    <div class="card social-card">
+
+        <h2>
+            <i class="fa-solid fa-link"></i>
+            Social Links
+        </h2>
+
+        <div class="social-grid">
+
+            <div class="input-group">
+                <label><i class="fa-brands fa-linkedin"></i> LinkedIn</label>
+                <input type="text" value="linkedin.com/in/ahmedrifat">
+            </div>
+
+            <div class="input-group">
+                <label><i class="fa-brands fa-x-twitter"></i> Twitter / X</label>
+                <input type="text" value="twitter.com/ahmedrifat21">
+            </div>
+
+            <div class="input-group">
+                <label><i class="fa-brands fa-github"></i> GitHub</label>
+                <input type="text" value="github.com/ahmedrifat21">
+            </div>
+
+            <div class="input-group">
+                <label><i class="fa-solid fa-globe"></i> Website / Portfolio</label>
+                <input type="text" value="rifat.dev">
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
