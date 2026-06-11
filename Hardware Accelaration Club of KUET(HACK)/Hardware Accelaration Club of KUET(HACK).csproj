@@ -7,4 +7,9 @@
     <RootNamespace>Hardware_Accelaration_Club_of_KUET_HACK_</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
+  </ItemGroup>
+
 </Project>
