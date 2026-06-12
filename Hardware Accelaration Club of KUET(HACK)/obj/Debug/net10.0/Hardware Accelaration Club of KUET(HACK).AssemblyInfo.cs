@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hardware Accelaration Club of KUET(HACK)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+774a4ec42866c6326e87a7a46600cc8b29451ae1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f5fc3b2ece96363ffb07188d797cdbb3a5176ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hardware Accelaration Club of KUET(HACK)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hardware Accelaration Club of KUET(HACK)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

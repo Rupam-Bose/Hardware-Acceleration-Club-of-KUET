@@ -35,12 +35,10 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
                     await connection.OpenAsync();
 
                     string query = @"
-                INSERT INTO Users
-                (FullName, Username, Email, Department, BatchSession,
-                 PasswordHash, IsActive, CreatedAt)
-                VALUES
-                (@FullName, @Username, @Email, @Department, @BatchSession,
-                 @PasswordHash, @IsActive, @CreatedAt)";
+                        INSERT INTO Users
+                        (FullName, Username, Email, Department, BatchSession, PasswordHash, IsActive, CreatedAt)
+                        VALUES
+                        (@FullName, @Username, @Email, @Department, @BatchSession, @PasswordHash, @IsActive, @CreatedAt)";
 
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
@@ -86,7 +84,6 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
             }
         }
 
-
         [HttpPost]
         [Route("login")]
         public async Task<IActionResult> Login([FromBody] login login)
@@ -98,27 +95,22 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
 
             try
             {
-                using (SqlConnection connection =
-                    new SqlConnection(_configuration.GetConnectionString("DBCon")))
+                using (SqlConnection connection = new SqlConnection(
+                    _configuration.GetConnectionString("DBCon")))
                 {
                     await connection.OpenAsync();
 
-                    string query =
-                        @"SELECT UserID,
-                         FullName,
-                         Username,
-                         Email,
-                         PasswordHash
-                  FROM Users
-                  WHERE Email = @Email";
+                    string query = @"
+                        SELECT UserID, FullName, Username, Email, PasswordHash
+                        FROM Users
+                        WHERE Email = @Email";
 
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
                         cmd.Parameters.Add("@Email", SqlDbType.NVarChar)
-                           .Value = login.Email;
+                            .Value = login.Email;
 
-                        using (SqlDataReader reader =
-                            await cmd.ExecuteReaderAsync())
+                        using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
                         {
                             if (!await reader.ReadAsync())
                             {
@@ -129,13 +121,12 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
                                 });
                             }
 
-                            string storedHash =
-                                reader["PasswordHash"].ToString();
+                            string storedHash = reader["PasswordHash"].ToString();
 
-                            bool isValidPassword =
-                                BCrypt.Net.BCrypt.Verify(
-                                    login.Password,
-                                    storedHash);
+                            bool isValidPassword = BCrypt.Net.BCrypt.Verify(
+                                login.Password,
+                                storedHash
+                            );
 
                             if (!isValidPassword)
                             {

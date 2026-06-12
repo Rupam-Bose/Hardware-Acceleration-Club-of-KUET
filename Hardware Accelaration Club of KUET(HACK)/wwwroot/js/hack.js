@@ -26,6 +26,18 @@ function openlogin() {
   window.location.href = "/Home/login";
 }
 
+function openEditProfile() {
+  window.location.href = "/Home/EditProfile";
+}
+
+function openSaveChanges() {
+  window.location.href = "/Home/MyProfile";
+}
+
+function openCancel() {
+  window.location.href = "/Home/MyProfile";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("signupForm");
 
@@ -128,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (result.success) {
         alert("Login Successful");
-        window.location.href = "/Home/Index";
+        window.location.href = "/Home/MyProfile";
       } else {
         alert(result.message);
       }

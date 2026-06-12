@@ -8,6 +8,7 @@
         <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="/js/hack.js"></script>
+    <script src="/js/Contact.js"></script>
 
 <header>
     <nav class="navbar">
@@ -81,10 +82,21 @@
                 <h4>Follow Us</h4>
 
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                                   <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.github.com/">
+                    <i class="fa-brands fa-github"></i>
+                </a>
                 </div>
             </div>
 
@@ -104,16 +116,28 @@
                 </div>
             </div>
 
-            <form>
+            <form id="contactForm">
 
                 <div class="row">
-                    <input type="text" placeholder="Your Name">
-                    <input type="email" placeholder="Your Email">
+                    <input
+                            id="fullName"
+                            type="text"
+                            placeholder="Your Name">
+                    <input
+                            id="email"
+                            type="email"
+                            placeholder="Your Email">
                 </div>
 
-                <input type="text" placeholder="Subject">
+                <input
+                            id="subject"
+                            type="text"
+                            placeholder="Subject">
 
-                <textarea rows="8" placeholder="Your Message"></textarea>
+                <textarea
+                            id="message"
+                            rows="8"
+                            placeholder="Your Message"></textarea>
 
                 <button type="submit">
                     <i class="fa-regular fa-paper-plane"></i>
@@ -135,7 +159,7 @@
 
         <!-- Logo Section -->
         <div class="footer-col">
-            <div class="logo">
+            <div class="logo" onclick="openHome()">
                <img src="/Images/Hack_logo.png" alt="" class="logo">
                 <div>
                     <h2>HACK</h2>
@@ -157,11 +181,11 @@
             <h3>Quick Links</h3>
 
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Team</a></li>
+                <li><a onclick="openHome()">Home</a></li>
+                <li><a onclick="openAbout()">About</a></li>
+                <li><a onclick="openProjects()">Projects</a></li>
+                <li><a onclick="openEvents()">Events</a></li>
+                <li><a onclick="openContact()">Contact</a></li>
             </ul>
         </div>
 
@@ -191,19 +215,19 @@
 
             <div class="social-icons">
 
-                <a href="#">
+                  <a href="https://www.facebook.com/">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
 
-                <a href="#">
+                <a href="https://www.linkedin.com/">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
 
-                <a href="#">
+                <a href="https://www.instagram.com/">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
 
-                <a href="#">
+                <a href="https://www.github.com/">
                     <i class="fa-brands fa-github"></i>
                 </a>
 
@@ -213,7 +237,7 @@
     </div>
 
     <div class="footer-bottom">
-        © 2024 HACK KUET. All rights reserved.
+        ©️ 2026 HACK KUET. All rights reserved.
     </div>
 
 </footer>

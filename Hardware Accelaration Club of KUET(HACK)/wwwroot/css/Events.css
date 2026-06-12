@@ -233,7 +233,7 @@ button{
 /* Scrollable Event Section */
 
 .event-list{
-    max-height:78vh;
+    max-height:95vh;
     overflow-y:auto;
     padding-right:10px;
 }

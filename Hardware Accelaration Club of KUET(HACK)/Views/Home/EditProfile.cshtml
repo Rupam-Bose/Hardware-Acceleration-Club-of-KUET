@@ -1,15 +1,19 @@
 @{
     Layout=null;
-}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/EditProfile.css">
+ }
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Profile</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/EditProfile.css">
+<script src="/js/hack.js"></script>
+<script src="/js/EditProfile.js"></script>
+
 
 <header>
     <nav class="navbar">
-         <img onclick="openHome()" src="/Images/Hack_logo.png" alt="" class="logo">
+        <img onclick="openHome()" src="/Images/Hack_logo.png" alt="" class="logo">
         <ul class="nav-links">
             <li onclick="openHome()">Home</li>
             <li onclick="openAbout()">About</li>
@@ -18,21 +22,21 @@
             <li onclick="openContact()">Contact</li>
         </ul>
         <div>
-        <button onclick="openlogin()" class="btn1">Log Out</button>
+            <button onclick="openlogin()" class="btn1">Log Out</button>
         </div>
     </nav>
 </header>
 
-<form class="profile-form">
+<form id="profileForm" class="profile-form">
 
     <div class="top-bar">
-        <div>
+        <div class="profile">
             <h1>Edit Your Profile</h1>
             <p>Update your information and preferences</p>
         </div>
 
         <div class="top-buttons">
-            <button type="button" class="cancel-btn">Cancel</button>
+            <button type="button" class="cancel-btn" onclick="openCancel()">Cancel</button>
             <button type="submit" class="save-btn">
                 <i class="fa-regular fa-floppy-disk"></i>
                 Save Changes
@@ -45,37 +49,10 @@
         <!-- Left Side -->
         <div class="left-column">
 
-            <!-- Profile Picture -->
-            <div class="card">
-                <h2>Profile Picture</h2>
 
-                <div class="profile-upload">
-
-                    <div class="image-box">
-                        <img src="profile.jpg" alt="">
-                        <div class="camera">
-                            <i class="fa-solid fa-camera"></i>
-                        </div>
-                    </div>
-
-                    <div class="upload-area">
-                      
-
-                        <label class="upload-btn">
-                            <i class="fa-solid fa-upload"></i>
-                            Upload Photo
-                            <input type="file" hidden>
-                        </label>
-
-                        <button type="button" class="remove-btn">
-                            Remove Photo
-                        </button>
-                    </div>
-
-                </div>
-            </div>
 
             <!-- Academic Information -->
+         <div class="Academic">    
             <div class="card">
 
                 <h2>
@@ -85,7 +62,7 @@
 
                 <div class="input-group">
                     <label>Department</label>
-                    <select id = "Department">
+                    <select id="Department">
                         <option value="">Select Your Department</option>
                         <option value="CSE">CSE</option>
                         <option value="EEE">EEE</option>
@@ -98,14 +75,14 @@
 
                     <div class="input-group">
                         <label>Batch</label>
-                    <select id = "Batch">
-                        <option value="">Select Your Batch</option>
-                        <option value="2K20">2K20</option>
-                        <option value="2K21">2K21</option>
-                        <option value="2K22">2K22</option>
-                        <option value="2K23">2K23</option>
-                        <option value="2K24">2K24</option>
-                    </select>
+                        <select id="Batch">
+                            <option value="">Select Your Batch</option>
+                            <option value="2K20">2K20</option>
+                            <option value="2K21">2K21</option>
+                            <option value="2K22">2K22</option>
+                            <option value="2K23">2K23</option>
+                            <option value="2K24">2K24</option>
+                        </select>
                     </div>
 
                     <div class="input-group">
@@ -117,14 +94,15 @@
 
                 <div class="input-group">
                     <label>University / Institute</label>
-                    <input type="text" name="University" id="university">
+                    <input id="university" type="text">
                 </div>
 
                 <div class="input-group">
                     <label>Current Year / Semester</label>
-                    <input type="text" name="Semester" id="semester">
+                    <input id="semester" type="text">
                 </div>
 
+            </div>
             </div>
 
         </div>
@@ -144,19 +122,19 @@
 
                     <div class="input-group">
                         <label>Full Name</label>
-                        <input type="text" value="Ahmed Rifat">
+                        <input id="fullName" type="text">
                     </div>
 
                     <div class="input-group">
                         <label>Username</label>
-                        <input type="text" value="ahmedrifat21">
+                        <input id="username" type="text">
                     </div>
 
                 </div>
 
                 <div class="input-group">
                     <label>Email Address</label>
-                    <input type="email" value="ahmedrifat@kuet.ac.bd">
+                    <input id="email" type="email">
                 </div>
 
                 <div class="input-group">
@@ -176,9 +154,9 @@
 
                 <div class="input-group">
                     <label>Bio</label>
-                    <textarea rows="3">Write Something...</textarea>
+                    <textarea id="bio" rows="2"></textarea>
                     <label>About Yourslef</label>
-                    <textarea rows="5">Write Something...</textarea>
+                    <textarea id="about" rows="3"></textarea>
                 </div>
 
 
@@ -200,22 +178,22 @@
 
             <div class="input-group">
                 <label><i class="fa-brands fa-linkedin"></i> LinkedIn</label>
-                <input type="text" value="linkedin.com/in/ahmedrifat">
+                <input id="linkedin" type="text">
             </div>
 
             <div class="input-group">
                 <label><i class="fa-brands fa-x-twitter"></i> Twitter / X</label>
-                <input type="text" value="twitter.com/ahmedrifat21">
+                <input id="twitter" type="text">
             </div>
 
             <div class="input-group">
                 <label><i class="fa-brands fa-github"></i> GitHub</label>
-                <input type="text" value="github.com/ahmedrifat21">
+                <input id="github" type="text">
             </div>
 
             <div class="input-group">
                 <label><i class="fa-solid fa-globe"></i> Website / Portfolio</label>
-                <input type="text" value="rifat.dev">
+                <input id="website" type="text">
             </div>
 
         </div>
@@ -223,3 +201,93 @@
     </div>
 
 </form>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo Section -->
+        <div class="footer-col">
+            <div class="logo" onclick="openHome()">
+                <img src="/Images/Hack_logo.png" alt="" class="logo">
+                <div>
+                    <h2>HACK</h2>
+                </div>
+            </div>
+
+            <p>
+                Hardware Acceleration Club of KUET (HACK)
+            </p>
+
+            <p>
+                A community of innovators building the
+                future through hardware.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a onclick="openHome()">Home</a></li>
+                <li><a onclick="openAbout()">About</a></li>
+                <li><a onclick="openProjects()">Projects</a></li>
+                <li><a onclick="openEvents()">Events</a></li>
+                <li><a onclick="openContact()">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+            <h3>Connect</h3>
+
+            <div class="contact-item">
+                <i class="fa-regular fa-envelope"></i>
+                <span>hack@kuet.ac.bd</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+880 1712 345 678</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>KUET Campus, Khulna-9203, Bangladesh</span>
+            </div>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-col">
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                   <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.github.com/">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        ©️ 2026 HACK KUET. All rights reserved.
+    </div>
+
+</footer>
