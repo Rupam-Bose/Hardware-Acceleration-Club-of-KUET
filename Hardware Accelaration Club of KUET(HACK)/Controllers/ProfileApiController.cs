@@ -15,9 +15,6 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
             _configuration = configuration;
         }
 
-        // ===========================
-        // GET PROFILE
-        // ===========================
         [HttpGet]
         public IActionResult GetProfile()
         {
@@ -33,9 +30,6 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
                 {
                     con.Open();
 
-                    // ===========================
-                    // USERS
-                    // ===========================
                     SqlCommand cmd1 =
                         new SqlCommand("SELECT TOP 1 * FROM Users", con);
 
@@ -53,9 +47,6 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
 
                     reader1.Close();
 
-                    // ===========================
-                    // ACADEMIC INFO
-                    // ===========================
                     SqlCommand cmd2 = new SqlCommand(
                         "SELECT TOP 1 * FROM AcademicInfo WHERE UserId=@id",
                         con);
@@ -87,9 +78,7 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
 
                     reader2.Close();
 
-                    // ===========================
-                    // PROFILE DETAILS
-                    // ===========================
+
                     SqlCommand cmd3 = new SqlCommand(
                         "SELECT TOP 1 * FROM ProfileDetails WHERE UserId=@id",
                         con);
@@ -136,9 +125,7 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
 
                     reader3.Close();
 
-                    // ===========================
-                    // SOCIAL LINKS
-                    // ===========================
+
                     SqlCommand cmd4 = new SqlCommand(
                         "SELECT TOP 1 * FROM SocialLinks WHERE UserId=@id",
                         con);
@@ -190,9 +177,7 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
             }
         }
 
-        // ===========================
-        // UPDATE PROFILE
-        // ===========================
+
         [HttpPut]
         public IActionResult UpdateProfile(
             [FromBody] ProfileUpdateDto model)
@@ -227,9 +212,7 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
 
                     cmd1.ExecuteNonQuery();
 
-                    // ===========================
-                    // ACADEMIC INFO
-                    // ===========================
+
                     SqlCommand cmd2 = new SqlCommand(
                     @"UPDATE AcademicInfo
                       SET University=@University,
@@ -246,9 +229,7 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
 
                     cmd2.ExecuteNonQuery();
 
-                    // ===========================
-                    // PROFILE DETAILS
-                    // ===========================
+
                     SqlCommand cmd3 = new SqlCommand(
                     @"UPDATE ProfileDetails
                       SET Bio=@Bio,
@@ -268,9 +249,7 @@ namespace Hardware_Accelaration_Club_of_KUET_HACK_.Controllers
 
                     cmd3.ExecuteNonQuery();
 
-                    // ===========================
-                    // SOCIAL LINKS
-                    // ===========================
+ 
                     SqlCommand cmd4 = new SqlCommand(
                     @"UPDATE SocialLinks
                       SET LinkedIn=@LinkedIn,
